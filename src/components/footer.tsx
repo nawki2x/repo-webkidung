@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link href="#home" className="inline-flex items-center gap-2 mb-4">
               <Image
-                src="https://res.cloudinary.com/dghc9ru/image/upload/v1749725172/IMG_9100_trnsprnt_logo_web_dekajh.svg"
+                src="https://res.cloudinary.com/dghc9qsru/image/upload/v1749725172/IMG_9100_trnsprnt_logo_web_dekajh.svg"
                 alt="Logo Kidung Kaos Kidung"
                 width={40}
                 height={40}

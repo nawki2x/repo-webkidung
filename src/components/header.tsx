@@ -47,7 +47,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="#home" className="flex items-center gap-2">
             <Image
-              src="https://res.cloudinary.com/dghc9ru/image/upload/v1749725172/IMG_9100_trnsprnt_logo_web_dekajh.svg"
+              src="https://res.cloudinary.com/dghc9qsru/image/upload/v1749725172/IMG_9100_trnsprnt_logo_web_dekajh.svg"
               alt="Kidung Kaos Kidung Logo"
               width={50}
               height={50}
@@ -86,7 +86,7 @@ export default function Header() {
                     <div className="flex justify-between items-center p-4 border-b">
                        <Link href="#home" onClick={() => setOpen(false)} className="flex items-center gap-2">
                           <Image
-                            src="https://res.cloudinary.com/dghc9ru/image/upload/v1749725172/IMG_9100_trnsprnt_logo_web_dekajh.svg"
+                            src="https://res.cloudinary.com/dghc9qsru/image/upload/v1749725172/IMG_9100_trnsprnt_logo_web_dekajh.svg"
                             alt="Kidung Kaos Kidung Logo"
                             width={40}
                             height={40}
