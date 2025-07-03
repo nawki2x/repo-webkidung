@@ -50,9 +50,9 @@ export default function MarketplaceSection() {
     <section id="marketplace" className="py-24 sm:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight">Find Us Online</h2>
+          <h2 className="text-3xl font-bold tracking-tight">Temukan Kami Online</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Shop with ease through your favorite marketplaces.
+            Belanja dengan mudah melalui marketplace favorit Anda.
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export default function MarketplaceSection() {
                 <div className="p-8 bg-card rounded-lg flex justify-center items-center h-40 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                   <Image
                     src={place.logoSrc}
-                    alt={`${place.name} logo`}
+                    alt={`Logo ${place.name}`}
                     width={150}
                     height={60}
                     className="object-contain filter dark:invert"

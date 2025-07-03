@@ -54,17 +54,17 @@ export default function HeroSection() {
           className="text-4xl md:text-6xl font-bold tracking-tight mb-4"
           variants={itemVariants}
         >
-          Your Vision, <span className="text-primary">Our Fabric</span>
+          Wujudkan Imajinasimu, <span className="text-primary">di Atas Kain Kami</span>
         </motion.h1>
         <motion.p
           className="max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground mb-8"
           variants={itemVariants}
         >
-          Welcome to Kampung Kaos Kidung. We bring your ideas to life with high-quality plain, custom, and convection t-shirts.
+          Selamat datang di Kampung Kaos Kidung. Kami mewujudkan ide-ide brilian Anda dengan kaos polos, custom, dan konveksi berkualitas wahid.
         </motion.p>
         <motion.div variants={itemVariants}>
           <Button asChild size="lg">
-            <Link href="#products">Explore Our Products</Link>
+            <Link href="#products">Lihat Layanan Kami</Link>
           </Button>
         </motion.div>
       </motion.div>

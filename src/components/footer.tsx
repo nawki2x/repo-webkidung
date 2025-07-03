@@ -27,7 +27,7 @@ export default function Footer() {
             <Link href="#home" className="inline-flex items-center gap-2 mb-4">
               <Image
                 src="https://res.cloudinary.com/dghc9ru/image/upload/v1749725172/IMG_9100_trnsprnt_logo_web_dekajh.svg"
-                alt="Kidung Kaos Kidung Logo"
+                alt="Logo Kidung Kaos Kidung"
                 width={40}
                 height={40}
                 className="dark:invert"
@@ -35,19 +35,19 @@ export default function Footer() {
               <span className="font-bold text-lg">Kidung Kaos Kreations</span>
             </Link>
             <p className="text-muted-foreground max-w-md mx-auto md:mx-0">
-              Your trusted center for high-quality plain, custom, and convection t-shirts.
+              Pusat terpercaya Anda untuk kaos polos, custom, dan konveksi berkualitas tinggi.
             </p>
           </div>
           <div>
-            <h3 className="font-bold mb-4">Contact Us</h3>
+            <h3 className="font-bold mb-4">Hubungi Kami</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li><a href="mailto:contact@kidungkaos.com" className="hover:text-primary">contact@kidungkaos.com</a></li>
               <li><a href="https://wa.me/6289504951975" className="hover:text-primary">WA: +62 895-0495-1975</a></li>
-              <li><span>Cirebon, West Java, Indonesia</span></li>
+              <li><span>Cirebon, Jawa Barat, Indonesia</span></li>
             </ul>
           </div>
           <div>
-            <h3 className="font-bold mb-4">Shop At</h3>
+            <h3 className="font-bold mb-4">Beli di</h3>
             <ul className="space-y-2 text-muted-foreground">
               {marketplaceLinks.map((link) => (
                 <li key={link.name}>
@@ -60,14 +60,14 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 pt-8 border-t flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Kidung Kaos Kreations. All Rights Reserved.</p>
+          <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Kidung Kaos Kreations. Hak Cipta Dilindungi.</p>
           <div className="flex gap-2">
             {socialLinks.map((link) => (
               <Link key={link.name} href={link.href} target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
                   <Image
                     src={link.src}
-                    alt={`${link.name} logo`}
+                    alt={`Logo ${link.name}`}
                     width={20}
                     height={20}
                     className="filter dark:invert"

@@ -22,19 +22,19 @@ export default function AboutSection() {
       >
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">About Kampung Kaos Kidung</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-4">Tentang Kampung Kaos Kidung</h2>
             <p className="text-muted-foreground mb-4">
-              For years, Kidung Kaos Kreations has been the trusted heart of our community for all things t-shirts. We started with a simple mission: to provide high-quality, comfortable, and stylish apparel that people love to wear.
+              Selama bertahun-tahun, Kidung Kaos Kreations telah menjadi jantung kepercayaan komunitas kami untuk segala hal tentang kaos. Kami memulai dengan misi sederhana: menyediakan pakaian berkualitas tinggi, nyaman, dan modis yang disukai banyak orang.
             </p>
             <p className="text-muted-foreground">
-              From individual custom prints to large-scale convection orders for businesses and events, we handle every project with passion and precision. Our commitment to quality materials and craftsmanship ensures that every shirt we produce is a masterpiece you'll be proud to own.
+              Dari sablon custom satuan hingga pesanan konveksi skala besar untuk bisnis dan acara, kami menangani setiap proyek dengan semangat dan presisi. Komitmen kami pada bahan dan pengerjaan berkualitas memastikan setiap kaos yang kami produksi adalah mahakarya yang akan Anda banggakan.
             </p>
           </div>
           <div className="order-1 lg:order-2">
             <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden shadow-lg">
                <Image
                 src="https://placehold.co/600x450.png"
-                alt="Kampung Kaos Kidung workshop"
+                alt="Workshop Kampung Kaos Kidung"
                 width={600}
                 height={450}
                 className="object-cover w-full h-full"

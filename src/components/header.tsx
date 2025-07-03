@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react';
@@ -17,12 +18,12 @@ const socialLinks = [
 ];
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Products', href: '#products' },
-  { name: 'Portfolio', href: '#portfolio' },
-  { name: 'Find Us', href: '#marketplace' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Beranda', href: '#home' },
+  { name: 'Tentang Kami', href: '#about' },
+  { name: 'Layanan', href: '#products' },
+  { name: 'Portofolio', href: '#portfolio' },
+  { name: 'Toko Online', href: '#marketplace' },
+  { name: 'Kontak', href: '#contact' },
 ];
 
 export default function Header() {
@@ -92,7 +93,6 @@ export default function Header() {
                             height={40}
                             className="dark:invert"
                           />
-                           <span className="font-bold">Kidung Kaos</span>
                        </Link>
                     </div>
                     <nav className="flex-grow flex flex-col items-center justify-center gap-8">

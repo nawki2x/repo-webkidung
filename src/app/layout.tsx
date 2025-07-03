@@ -5,8 +5,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Kidung Kaos Kreations | Custom & Plain T-Shirts',
-  description: 'The center for plain, custom, and convection t-shirts. High-quality materials and printing for your brand or personal needs. Based in Kampung Kaos Kidung.',
+  title: 'Kidung Kaos Kreations | Kaos Custom & Polos Berkualitas',
+  description: 'Pusat kaos polos, custom, dan konveksi. Bahan dan sablon berkualitas tinggi untuk brand atau kebutuhan pribadimu. Berbasis di Kampung Kaos Kidung.',
   keywords: ['kaos polos', 'custom t-shirt', 'sablon kaos', 'konveksi kaos', 'kampung kaos kidung'],
 };
 
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="id" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

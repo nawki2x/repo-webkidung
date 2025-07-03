@@ -9,20 +9,20 @@ import { ArrowRight } from 'lucide-react';
 
 const products = [
   {
-    title: 'Plain T-Shirts',
-    description: 'High-quality, comfortable, and available in a wide variety of colors. Perfect for daily wear or as a base for your own creations.',
+    title: 'Kaos Polos',
+    description: 'Berkualitas tinggi, nyaman, dan tersedia dalam beragam warna. Sempurna untuk pakaian sehari-hari atau sebagai dasar untuk kreasimu.',
     image: 'https://placehold.co/600x400.png',
     aiHint: 'plain t-shirt'
   },
   {
-    title: 'Custom Printing',
-    description: 'Bring your designs to life with our expert printing services. We offer various techniques to match your vision and budget.',
+    title: 'Sablon Custom',
+    description: 'Wujudkan desainmu dengan layanan sablon ahli kami. Kami menawarkan berbagai teknik untuk menyesuaikan visi dan anggaran Anda.',
     image: 'https://placehold.co/600x400.png',
     aiHint: 't-shirt printing'
   },
   {
-    title: 'Convection Services',
-    description: 'Large-scale production for your brand, company, or event. We ensure consistency, quality, and timely delivery for every order.',
+    title: 'Jasa Konveksi',
+    description: 'Produksi skala besar untuk brand, perusahaan, atau acaramu. Kami menjamin konsistensi, kualitas, dan pengiriman tepat waktu untuk setiap pesanan.',
     image: 'https://placehold.co/600x400.png',
     aiHint: 'clothing factory'
   },
@@ -54,9 +54,9 @@ export default function ProductsSection() {
     <section id="products" className="py-24 sm:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight">Our Services</h2>
+          <h2 className="text-3xl font-bold tracking-tight">Layanan Kami</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Whether you need a single shirt or a thousand, we have a solution for you.
+            Butuh satu kaos atau ribuan? Kami punya solusinya untuk Anda.
           </p>
         </div>
 

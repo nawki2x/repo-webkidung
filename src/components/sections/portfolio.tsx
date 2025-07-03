@@ -38,9 +38,9 @@ export default function PortfolioSection() {
         variants={sectionVariants}
       >
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight">Our Past Works</h2>
+          <h2 className="text-3xl font-bold tracking-tight">Karya Terbaik Kami</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            A glimpse into the quality and creativity we deliver to our clients.
+            Intip kualitas dan kreativitas yang kami persembahkan untuk para pelanggan.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export default function PortfolioSection() {
                     <CardContent className="flex aspect-[3/4] items-center justify-center p-0">
                       <Image 
                         src={item.image} 
-                        alt={`Portfolio item ${item.id}`} 
+                        alt={`Portofolio ${item.id}`} 
                         width={600} 
                         height={800} 
                         className="object-cover w-full h-full"

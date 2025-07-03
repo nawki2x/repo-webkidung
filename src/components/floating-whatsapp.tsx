@@ -33,7 +33,7 @@ export default function FloatingWhatsApp() {
           </motion.div>
         </TooltipTrigger>
         <TooltipContent>
-          <p>Chat with us on WhatsApp!</p>
+          <p>Chat dengan kami di WhatsApp!</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
