@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react';
@@ -54,7 +53,6 @@ export default function Header() {
               priority
               className="dark:invert"
             />
-            <span className="font-bold text-lg hidden sm:block">Kidung Kaos Kreations</span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-6">
