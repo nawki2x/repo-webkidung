@@ -30,7 +30,6 @@ export default function Footer() {
                 alt="Logo Kidung Kaos Kidung"
                 width={40}
                 height={40}
-                className="dark:invert"
               />
               <span className="font-bold text-lg">Kidung Kaos Kreations</span>
             </Link>

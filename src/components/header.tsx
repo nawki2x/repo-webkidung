@@ -52,7 +52,6 @@ export default function Header() {
               width={50}
               height={50}
               priority
-              className="dark:invert"
             />
           </Link>
 
@@ -91,7 +90,6 @@ export default function Header() {
                             alt="Kidung Kaos Kidung Logo"
                             width={40}
                             height={40}
-                            className="dark:invert"
                           />
                        </Link>
                     </div>
