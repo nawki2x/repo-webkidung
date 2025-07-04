@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react';
@@ -50,7 +49,7 @@ export default function MarketplaceSection() {
     <section id="marketplace" className="py-24 sm:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight">Temukan Kami Online</h2>
+          <h2 className="text-3xl font-bold tracking-tight">Temukan Kami di Marketplace</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Belanja dengan mudah melalui marketplace favorit Anda.
           </p>
