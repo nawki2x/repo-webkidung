@@ -4,6 +4,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Autoplay from "embla-carousel-autoplay"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -28,6 +29,10 @@ const sectionVariants = {
 };
 
 export default function PortfolioSection() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
+
   return (
     <section id="portfolio" className="py-24 sm:py-32 bg-secondary/50">
        <motion.div
@@ -45,11 +50,14 @@ export default function PortfolioSection() {
         </div>
 
         <Carousel
+          plugins={[plugin.current]}
           opts={{
             align: "start",
             loop: true,
           }}
           className="w-full max-w-6xl mx-auto"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
         >
           <CarouselContent>
             {portfolioItems.map((item) => (
