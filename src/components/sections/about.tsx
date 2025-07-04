@@ -7,6 +7,7 @@ import Autoplay from "embla-carousel-autoplay"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -30,8 +31,30 @@ const aboutImages = [
 
 export default function AboutSection() {
     const plugin = React.useRef(
-    Autoplay({ delay: 2500, stopOnInteraction: true })
-  )
+      Autoplay({ delay: 2500, stopOnInteraction: true })
+    )
+
+    const [api, setApi] = React.useState<CarouselApi>()
+    const [current, setCurrent] = React.useState(0)
+    const [count, setCount] = React.useState(0)
+
+    React.useEffect(() => {
+      if (!api) {
+        return
+      }
+
+      setCount(api.scrollSnapList().length)
+      setCurrent(api.selectedScrollSnap())
+
+      api.on("select", () => {
+        setCurrent(api.selectedScrollSnap())
+      })
+    }, [api])
+
+    const handleDotClick = (index: number) => {
+      api?.scrollTo(index)
+    }
+
   return (
     <section id="about" className="py-24 sm:py-32 bg-secondary/50">
       <motion.div
@@ -53,6 +76,7 @@ export default function AboutSection() {
           </div>
           <div className="order-1 lg:order-2">
             <Carousel
+              setApi={setApi}
               plugins={[plugin.current]}
               opts={{
                 align: "start",
@@ -83,6 +107,18 @@ export default function AboutSection() {
               <CarouselPrevious className="hidden sm:flex" />
               <CarouselNext className="hidden sm:flex" />
             </Carousel>
+             <div className="flex justify-center gap-2 mt-4">
+              {Array.from({ length: count }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleDotClick(index)}
+                  className={`h-2 w-2 rounded-full transition-colors ${
+                    current === index ? "bg-primary" : "bg-muted-foreground/50"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </motion.div>

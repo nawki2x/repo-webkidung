@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react';
@@ -8,6 +7,7 @@ import Autoplay from "embla-carousel-autoplay"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -33,6 +33,28 @@ export default function PortfolioSection() {
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )
 
+  const [api, setApi] = React.useState<CarouselApi>()
+  const [current, setCurrent] = React.useState(0)
+  const [count, setCount] = React.useState(0)
+
+  React.useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap())
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap())
+    })
+  }, [api])
+
+  const handleDotClick = (index: number) => {
+    api?.scrollTo(index)
+  }
+
+
   return (
     <section id="portfolio" className="py-24 sm:py-32 bg-secondary/50">
        <motion.div
@@ -49,39 +71,54 @@ export default function PortfolioSection() {
           </p>
         </div>
 
-        <Carousel
-          plugins={[plugin.current]}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-6xl mx-auto"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
-        >
-          <CarouselContent>
-            {portfolioItems.map((item) => (
-              <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card className="overflow-hidden">
-                    <CardContent className="flex aspect-[3/4] items-center justify-center p-0">
-                      <Image 
-                        src={item.image} 
-                        alt={`Portofolio ${item.id}`} 
-                        width={600} 
-                        height={800} 
-                        className="object-cover w-full h-full"
-                        data-ai-hint={item.aiHint}
-                      />
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex" />
-          <CarouselNext className="hidden sm:flex" />
-        </Carousel>
+        <div>
+          <Carousel
+            setApi={setApi}
+            plugins={[plugin.current]}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
+          >
+            <CarouselContent>
+              {portfolioItems.map((item) => (
+                <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="overflow-hidden">
+                      <CardContent className="flex aspect-[3/4] items-center justify-center p-0">
+                        <Image 
+                          src={item.image} 
+                          alt={`Portofolio ${item.id}`} 
+                          width={600} 
+                          height={800} 
+                          className="object-cover w-full h-full"
+                          data-ai-hint={item.aiHint}
+                        />
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden sm:flex" />
+            <CarouselNext className="hidden sm:flex" />
+          </Carousel>
+          <div className="flex justify-center gap-2 mt-4">
+              {Array.from({ length: count }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleDotClick(index)}
+                  className={`h-2 w-2 rounded-full transition-colors ${
+                    current === index ? "bg-primary" : "bg-muted-foreground/50"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+        </div>
       </motion.div>
     </section>
   );
