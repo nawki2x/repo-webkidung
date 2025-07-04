@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react';
@@ -31,7 +30,7 @@ export default function Footer() {
                 width={40}
                 height={40}
               />
-              <span className="font-bold text-lg">Kidung Kaos Kreations</span>
+              <span className="font-bold text-lg">Kampung Kaos Kidung</span>
             </Link>
             <p className="text-muted-foreground max-w-md mx-auto md:mx-0">
               Pusat terpercaya Anda untuk kaos polos, custom, dan konveksi berkualitas tinggi.
@@ -59,7 +58,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 pt-8 border-t flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Kidung Kaos Kreations. Hak Cipta Dilindungi.</p>
+          <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Kampung Kaos Kidung. Hak Cipta Dilindungi.</p>
           <div className="flex gap-2">
             {socialLinks.map((link) => (
               <Link key={link.name} href={link.href} target="_blank" rel="noopener noreferrer">
