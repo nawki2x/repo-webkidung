@@ -38,7 +38,7 @@ export default function PortfolioSection() {
         variants={sectionVariants}
       >
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight">Karya Terbaik Kami</h2>
+          <h2 className="text-3xl font-bold tracking-tight">Portofolio Mitra Partnership</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Intip kualitas dan kreativitas yang kami persembahkan untuk para pelanggan.
           </p>
