@@ -15,6 +15,18 @@ const products = [
     aiHint: 'plain t-shirt'
   },
   {
+    title: 'Kaos Polo',
+    description: 'Tampil kasual namun tetap rapi dengan koleksi kaos polo kami. Pilihan tepat untuk seragam kantor atau acara semi-formal.',
+    image: 'https://placehold.co/600x400.png',
+    aiHint: 'polo shirt'
+  },
+  {
+    title: 'Jersey Olahraga',
+    description: 'Dibuat untuk performa maksimal, jersey kami cocok untuk tim olahraga Anda. Bahan ringan dan menyerap keringat.',
+    image: 'https://placehold.co/600x400.png',
+    aiHint: 'sports jersey'
+  },
+  {
     title: 'Sablon Custom',
     description: 'Wujudkan desainmu dengan layanan sablon ahli kami. Kami menawarkan berbagai teknik untuk menyesuaikan visi dan anggaran Anda.',
     image: 'https://placehold.co/600x400.png',

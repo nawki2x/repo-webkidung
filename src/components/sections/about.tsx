@@ -19,7 +19,7 @@ const sectionVariants = {
 };
 
 const aboutImages = [
-  { id: 1, src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1751278498/store_xjiouv.jpg', alt: 'Toko Kampung Kaos Kidung', aiHint: 'clothing store exterior' },
+  { id: 1, src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1751284507/store_acqxvy.jpg', alt: 'Toko Kampung Kaos Kidung', aiHint: 'clothing store exterior' },
   { id: 2, src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1751278499/store_dalam_ke2_kzrrmg.jpg', alt: 'Bagian Dalam Toko', aiHint: 'clothing store interior' },
   { id: 3, src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1751278498/store_dalam_ocv0uo.jpg', alt: 'Display Produk di Toko', aiHint: 't-shirt display' },
   { id: 4, src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1751278592/produksi_kidung_msbsgi.webp', alt: 'Proses Produksi Kaos', aiHint: 'screen printing' },
