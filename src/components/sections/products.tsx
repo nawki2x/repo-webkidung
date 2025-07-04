@@ -11,31 +11,31 @@ const products = [
   {
     title: 'Kaos Polos',
     description: 'Berkualitas tinggi, nyaman, dan tersedia dalam beragam warna. Sempurna untuk pakaian sehari-hari atau sebagai dasar untuk kreasimu.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1751288168/kajetan-sumila-RRB5PAF04Kw-unsplash_avif_vrmidu.avif',
     aiHint: 'plain t-shirt'
   },
   {
-    title: 'Kaos Polo',
+    title: 'Polo T-shirt',
     description: 'Tampil kasual namun tetap rapi dengan koleksi kaos polo kami. Pilihan tepat untuk seragam kantor atau acara semi-formal.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1751288298/polo_tshirt_edited_mxdyw9.avif',
     aiHint: 'polo shirt'
   },
   {
-    title: 'Jersey Olahraga',
+    title: 'Jersey',
     description: 'Dibuat untuk performa maksimal, jersey kami cocok untuk tim olahraga Anda. Bahan ringan dan menyerap keringat.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1751278566/sport_xv1bkb.jpg',
     aiHint: 'sports jersey'
   },
   {
     title: 'Sablon Custom',
     description: 'Wujudkan desainmu dengan layanan sablon ahli kami. Kami menawarkan berbagai teknik untuk menyesuaikan visi dan anggaran Anda.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1751278560/produk_sablon_plastisol_ke_2_rlenla.jpg',
     aiHint: 't-shirt printing'
   },
   {
     title: 'Jasa Konveksi',
     description: 'Produksi skala besar untuk brand, perusahaan, atau acaramu. Kami menjamin konsistensi, kualitas, dan pengiriman tepat waktu untuk setiap pesanan.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1751278596/sablon_pres_jahit_jgp0wh.webp',
     aiHint: 'clothing factory'
   },
 ];
