@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from 'react';
@@ -25,7 +26,15 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link href="#home" className="inline-flex items-center gap-2 mb-4">
               <Image
+                className="block dark:hidden"
                 src="https://res.cloudinary.com/dghc9qsru/image/upload/v1749725172/IMG_9100_trnsprnt_logo_web_dekajh.svg"
+                alt="Logo Kidung Kaos Kidung"
+                width={40}
+                height={40}
+              />
+              <Image
+                className="hidden dark:block"
+                src="https://res.cloudinary.com/dghc9qsru/image/upload/v1751282729/IMG_9100_trnsprnt_putih_ybejev.svg"
                 alt="Logo Kidung Kaos Kidung"
                 width={40}
                 height={40}
