@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from './theme-toggle';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
 const socialLinks = [
@@ -91,6 +91,9 @@ export default function Header() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right">
+                  <SheetHeader>
+                    <SheetTitle className="sr-only">Menu Navigasi</SheetTitle>
+                  </SheetHeader>
                   <div className="flex flex-col h-full">
                     <div className="flex justify-between items-center p-4 border-b">
                        <Link href="#home" onClick={() => setOpen(false)} className="flex items-center gap-2">
