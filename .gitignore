@@ -37,9 +37,14 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# genkit
 .genkit/*
 .env*
 
 # firebase
 firebase-debug.log
 firestore-debug.log
+
+# ssh key (keamanan)
+id_rsa
+id_rsa.pub
