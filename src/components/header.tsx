@@ -1,7 +1,7 @@
 
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
@@ -29,12 +29,13 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('#home');
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
       
-      const headerHeight = 80; // h-20 class
+      const headerHeight = headerRef.current?.offsetHeight || 80;
       const scrollY = window.scrollY + headerHeight + 20; // Add buffer
 
       const current = navLinks
@@ -64,7 +65,7 @@ export default function Header() {
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
-      const headerOffset = 80; // Height of the sticky header (h-20)
+      const headerOffset = headerRef.current?.offsetHeight || 80;
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -86,7 +87,7 @@ export default function Header() {
   };
 
   return (
-    <header className={cn(
+    <header ref={headerRef} className={cn(
       "sticky top-0 z-50 transition-all duration-300",
       isScrolled ? "bg-background/80 backdrop-blur-sm shadow-md" : "bg-transparent"
     )}>
