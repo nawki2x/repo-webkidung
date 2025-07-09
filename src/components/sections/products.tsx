@@ -63,7 +63,7 @@ const cardVariants = {
 
 export default function ProductsSection() {
   return (
-    <section id="products" className="py-24 sm:py-32 scroll-mt-20">
+    <section id="products" className="py-24 sm:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight">Layanan Kami</h2>

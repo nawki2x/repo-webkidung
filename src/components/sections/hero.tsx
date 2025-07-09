@@ -31,7 +31,7 @@ const itemVariants = {
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden scroll-mt-20">
+    <section id="home" className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
          <Image 
           src="https://placehold.co/1920x1080.png" 

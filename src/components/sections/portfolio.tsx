@@ -57,7 +57,7 @@ export default function PortfolioSection() {
 
 
   return (
-    <section id="portfolio" className="py-24 sm:py-32 bg-secondary/50 scroll-mt-20">
+    <section id="portfolio" className="py-24 sm:py-32 bg-secondary/50">
        <motion.div
         className="container mx-auto px-4"
         initial="hidden"
