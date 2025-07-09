@@ -29,12 +29,29 @@ const navLinks = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('#home');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
+      
+      const headerHeight = 80; // h-20 class
+      const scrollY = window.scrollY + headerHeight + 20; // Add buffer
+
+      const current = navLinks
+        .map(link => {
+          const element = document.getElementById(link.href.substring(1));
+          return { href: link.href, element };
+        })
+        .filter(item => item.element)
+        .findLast(item => scrollY >= item.element!.offsetTop);
+      
+      setActiveSection(current?.href ?? '#home');
     };
+
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Set initial state
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -66,7 +83,14 @@ export default function Header() {
 
           <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
-              <Link key={link.name} href={link.href} className="text-sm font-medium hover:text-primary transition-colors">
+              <Link 
+                key={link.name} 
+                href={link.href} 
+                className={cn(
+                  "text-sm font-medium transition-colors",
+                  activeSection === link.href ? "text-primary" : "text-foreground/60 hover:text-primary"
+                )}
+              >
                 {link.name}
               </Link>
             ))}
@@ -115,14 +139,22 @@ export default function Header() {
                     </div>
                     <nav className="flex-grow flex flex-col items-center justify-center gap-8">
                        {navLinks.map((link) => (
-                         <Link key={link.name} href={link.href} onClick={() => setOpen(false)} className="text-2xl font-semibold hover:text-primary transition-colors">
+                         <Link 
+                            key={link.name} 
+                            href={link.href} 
+                            onClick={() => setOpen(false)} 
+                            className={cn(
+                              "text-2xl font-semibold transition-colors",
+                              activeSection === link.href ? "text-primary" : "hover:text-primary"
+                            )}
+                         >
                            {link.name}
                          </Link>
                        ))}
                     </nav>
                      <div className="flex justify-center gap-4 p-4 border-t">
                         {socialLinks.map((link) => (
-                          <Link key={link.name} href={link.href} target="_blank" rel="noopener noreferrer">
+                          <Link key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" key={link.name}>
                             <Button variant="ghost" size="icon">
                               {link.icon}
                             </Button>
