@@ -4,8 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Menu, X, Instagram, Youtube, Facebook, Twitter } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from './theme-toggle';
@@ -46,14 +45,45 @@ export default function Header() {
         .filter(item => item.element)
         .findLast(item => scrollY >= item.element!.offsetTop);
       
-      setActiveSection(current?.href ?? '#home');
+      if (current && activeSection !== current.href) {
+        setActiveSection(current.href);
+      } else if (!current && window.scrollY < 400) {
+        setActiveSection('#home');
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Set initial state
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [activeSection]);
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const headerOffset = 80; // Height of the sticky header (h-20)
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      
+      setActiveSection(href);
+      
+      if (history.pushState) {
+        history.pushState(null, '', href);
+      } else {
+        window.location.hash = href;
+      }
+    }
+    
+    setOpen(false); // Close mobile menu if open
+  };
 
   return (
     <header className={cn(
@@ -62,7 +92,7 @@ export default function Header() {
     )}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link href="#home" className="flex items-center gap-2">
+          <Link href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="flex items-center gap-2">
             <Image
               className="block dark:hidden"
               src="https://res.cloudinary.com/dghc9qsru/image/upload/v1749725172/IMG_9100_trnsprnt_logo_web_dekajh.svg"
@@ -83,16 +113,17 @@ export default function Header() {
 
           <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
-              <Link 
+              <a 
                 key={link.name} 
                 href={link.href} 
+                onClick={(e) => handleLinkClick(e, link.href)}
                 className={cn(
-                  "text-sm font-medium transition-colors",
+                  "text-sm font-medium transition-colors cursor-pointer",
                   activeSection === link.href ? "text-primary" : "text-foreground/60 hover:text-primary"
                 )}
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
           </nav>
 
@@ -120,7 +151,7 @@ export default function Header() {
                   </SheetHeader>
                   <div className="flex flex-col h-full">
                     <div className="flex justify-between items-center p-4 border-b">
-                       <Link href="#home" onClick={() => setOpen(false)} className="flex items-center gap-2">
+                       <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="flex items-center gap-2">
                           <Image
                             className="block dark:hidden"
                             src="https://res.cloudinary.com/dghc9qsru/image/upload/v1749725172/IMG_9100_trnsprnt_logo_web_dekajh.svg"
@@ -135,26 +166,26 @@ export default function Header() {
                             width={40}
                             height={40}
                           />
-                       </Link>
+                       </a>
                     </div>
                     <nav className="flex-grow flex flex-col items-center justify-center gap-8">
                        {navLinks.map((link) => (
-                         <Link 
+                         <a
                             key={link.name} 
                             href={link.href} 
-                            onClick={() => setOpen(false)} 
+                            onClick={(e) => handleLinkClick(e, link.href)} 
                             className={cn(
-                              "text-2xl font-semibold transition-colors",
+                              "text-2xl font-semibold transition-colors cursor-pointer",
                               activeSection === link.href ? "text-primary" : "hover:text-primary"
                             )}
                          >
                            {link.name}
-                         </Link>
+                         </a>
                        ))}
                     </nav>
                      <div className="flex justify-center gap-4 p-4 border-t">
                         {socialLinks.map((link) => (
-                          <Link key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" key={link.name}>
+                          <Link key={link.name} href={link.href} target="_blank" rel="noopener noreferrer">
                             <Button variant="ghost" size="icon">
                               {link.icon}
                             </Button>
