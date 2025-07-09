@@ -59,25 +59,6 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [activeSection]);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const targetId = href.substring(1);
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement && headerRef.current) {
-      const headerHeight = headerRef.current.offsetHeight;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - headerHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-      history.pushState(null, '', href);
-      setOpen(false);
-    }
-  };
-
   return (
     <header ref={headerRef} className={cn(
       "sticky top-0 z-50 transition-all duration-300",
@@ -85,7 +66,7 @@ export default function Header() {
     )}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-2">
+          <a href="#home" className="flex items-center gap-2">
             <Image
               className="block dark:hidden"
               src="https://res.cloudinary.com/dghc9qsru/image/upload/v1749725172/IMG_9100_trnsprnt_logo_web_dekajh.svg"
@@ -109,7 +90,6 @@ export default function Header() {
               <a 
                 key={link.name} 
                 href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
                 className={cn(
                   "text-sm font-medium transition-colors cursor-pointer",
                   activeSection === link.href ? "text-primary" : "text-foreground/60 hover:text-primary"
@@ -144,7 +124,7 @@ export default function Header() {
                   </SheetHeader>
                   <div className="flex flex-col h-full">
                     <div className="flex justify-between items-center p-4 border-b">
-                       <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-2">
+                       <a href="#home" onClick={() => setOpen(false)} className="flex items-center gap-2">
                           <Image
                             className="block dark:hidden"
                             src="https://res.cloudinary.com/dghc9qsru/image/upload/v1749725172/IMG_9100_trnsprnt_logo_web_dekajh.svg"
@@ -166,7 +146,7 @@ export default function Header() {
                          <a
                             key={link.name} 
                             href={link.href} 
-                            onClick={(e) => handleNavClick(e, link.href)}
+                            onClick={() => setOpen(false)}
                             className={cn(
                               "text-2xl font-semibold transition-colors cursor-pointer",
                               activeSection === link.href ? "text-primary" : "hover:text-primary"
