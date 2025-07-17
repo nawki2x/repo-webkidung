@@ -39,7 +39,7 @@ export default function HeroSection() {
           alt="Assortment of colorful t-shirts"
           layout="fill"
           objectFit="cover"
-          className="opacity-10 dark:opacity-5"
+          className="opacity-20 dark:opacity-15"
           data-ai-hint="colorful t-shirts"
           priority
         />
