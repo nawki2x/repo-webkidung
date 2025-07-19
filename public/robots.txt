@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://kampungkaos.com
+
+# Sitemaps
+Sitemap: https://kampungkaos.com/sitemap.xml
