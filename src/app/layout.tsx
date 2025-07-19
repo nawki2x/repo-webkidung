@@ -5,7 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Kidung Kaos Kreations | Kaos Custom & Polos Berkualitas',
+  title: 'Kampung Kaos Kidung | Kaos Custom & Polos Berkualitas',
   description: 'Pusat kaos polos, custom, dan konveksi. Bahan dan sablon berkualitas tinggi untuk brand atau kebutuhan pribadimu. Berbasis di Kampung Kaos Kidung.',
   keywords: ['kaos polos', 'custom t-shirt', 'sablon kaos', 'konveksi kaos', 'kampung kaos kidung'],
 };
