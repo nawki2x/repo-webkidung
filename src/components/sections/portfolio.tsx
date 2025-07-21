@@ -54,7 +54,7 @@ export default function PortfolioSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight">Portofolio Mitra Partnership</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Intip kualitas dan kreativitas yang kami persembahkan untuk para pelanggan setia.
+            Dipercaya oleh berbagai merek, komunitas, dan institusi terkemuka. Kami bangga telah menjadi bagian dari cerita sukses mereka.
           </p>
         </div>
 
