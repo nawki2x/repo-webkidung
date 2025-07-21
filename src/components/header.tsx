@@ -21,8 +21,8 @@ const navLinks = [
   { name: 'Beranda', href: '#home' },
   { name: 'Tentang Kami', href: '#about' },
   { name: 'Produk', href: '#products' },
-  { name: 'Portofolio', href: '#portfolio' },
   { name: 'Toko Online', href: '#marketplace' },
+  { name: 'Portofolio', href: '#portfolio' },
   { name: 'Kontak', href: '#contact' },
 ];
 

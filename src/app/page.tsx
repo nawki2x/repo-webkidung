@@ -16,8 +16,8 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ProductsSection />
-        <PortfolioSection />
         <MarketplaceSection />
+        <PortfolioSection />
       </main>
       <Footer />
       <FloatingWhatsApp />
