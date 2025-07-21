@@ -20,7 +20,7 @@ const socialLinks = [
 const navLinks = [
   { name: 'Beranda', href: '#home' },
   { name: 'Tentang Kami', href: '#about' },
-  { name: 'Layanan', href: '#products' },
+  { name: 'Produk', href: '#products' },
   { name: 'Portofolio', href: '#portfolio' },
   { name: 'Toko Online', href: '#marketplace' },
   { name: 'Kontak', href: '#contact' },
