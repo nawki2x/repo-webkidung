@@ -49,7 +49,7 @@ export default function Footer() {
           <div>
             <h3 className="font-bold mb-4">Hubungi Kami</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="mailto:kaoskidung@gmail.com" className="hover:text-primary">Email: kaoskidung@gmail.com</a></li>
+              <li><a href="mailto:kampungkaoskidung@gmail.com" className="hover:text-primary">Email: kampungkaoskidung@gmail.com</a></li>
               <li><a href="https://wa.me/6289504951975" className="hover:text-primary">WA: +62 895-0495-1975</a></li>
               <li><a href="https://maps.app.goo.gl/vPnvSzNiUgEPC49J8" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Ponorogo, Jawa Timur, Indonesia</a></li>
             </ul>
