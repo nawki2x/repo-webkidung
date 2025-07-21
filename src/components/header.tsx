@@ -12,6 +12,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/co
 import { cn } from '@/lib/utils';
 
 const socialLinks = [
+    { name: 'Facebook', href: 'https://www.facebook.com/people/Kajawi-official/61567127458669/', icon: <Image width={24} height={24} className="filter dark:invert" alt="Facebook" src="https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/facebook.svg" /> },
   { name: 'Instagram', href: 'https://www.instagram.com/kidungkaos.official/', icon: <Image width={24} height={24} className="filter dark:invert" alt="Instagram" src="https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/instagram.svg" /> },
   { name: 'TikTok', href: 'https://www.tiktok.com/@kidungkaos', icon: <Image width={24} height={24} className="filter dark:invert" alt="TikTok" src="https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/tiktok.svg" /> },
 ];

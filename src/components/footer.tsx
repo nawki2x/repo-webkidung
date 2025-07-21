@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { Button } from './ui/button';
 
 const socialLinks = [
+  { name: 'Facebook', href: 'https://www.facebook.com/people/Kajawi-official/61567127458669/', src: 'https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/facebook.svg' },
   { name: 'WhatsApp', href: 'https://wa.me/6289504951975', src: 'https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/whatsapp.svg' },
   { name: 'Instagram', href: 'https://www.instagram.com/kidungkaos.official/', src: 'https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/instagram.svg' },
   { name: 'TikTok', href: 'https://www.tiktok.com/@kidungkaos', src: 'https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/tiktok.svg' },
