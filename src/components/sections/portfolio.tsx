@@ -4,24 +4,21 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import Autoplay from "embla-carousel-autoplay"
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselApi,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
 
-const portfolioItems = [
-  { id: 1, image: 'https://placehold.co/600x800.png', aiHint: 'band t-shirt' },
-  { id: 2, image: 'https://placehold.co/600x800.png', aiHint: 'corporate event shirt' },
-  { id: 3, image: 'https://placehold.co/600x800.png', aiHint: 'custom art apparel' },
-  { id: 4, image: 'https://placehold.co/600x800.png', aiHint: 'university club shirt' },
-  { id: 5, image: 'https://placehold.co/600x800.png', aiHint: 'sports team jersey' },
-  { id: 6, image: 'https://placehold.co/600x800.png', aiHint: 'minimalist design shirt' },
+const partnerLogos = [
+  { name: 'PLN', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099185/Logo_PLN_iwxa47.png' },
+  { name: 'IndiHome', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099184/Logo_indiHome_kr0fvl.png' },
+  { name: 'Yamaha', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099185/Logo_Yamaha_mfszw8.png' },
+  { name: 'BRI', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099183/Logo_BRI_wn2cmj.png' },
+  { name: 'Bank Jatim', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099184/Logo_Bank_Jatim_j6y7nv.png' },
+  { name: 'BNI', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099183/BNI_logo.svg_iayf7e.png' },
+  { name: 'BCA', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099184/Logo_Bank_BCA_fy4dyl.png' },
+  { name: 'BPR Jatim', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099184/Logo_BPR_Jatim_xd9jh8.png' },
+  { name: 'Pemkab Ponorogo', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099185/Logo_PEMKAB_Ponorogo_tokljz.png' },
+  { name: 'Djarum', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099184/Logo_Djarum_rkk3vi.png' },
+  { name: 'YRKI', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099186/Logo_YRKI_ocmbi1.png' },
+  { name: 'JFC', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099185/logo_JFC_wjzmj8.png' },
+  { name: 'Desa Prajegan', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099184/Logo_desa_prajegan_yhlkk7.png' },
 ];
 
 const sectionVariants = {
@@ -29,33 +26,22 @@ const sectionVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
 };
 
-export default function PortfolioSection() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  )
-
-  const [api, setApi] = React.useState<CarouselApi>()
-  const [current, setCurrent] = React.useState(0)
-  const [count, setCount] = React.useState(0)
-
-  React.useEffect(() => {
-    if (!api) {
-      return
+const logoContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
     }
-
-    setCount(api.scrollSnapList().length)
-    setCurrent(api.selectedScrollSnap())
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap())
-    })
-  }, [api])
-
-  const handleDotClick = (index: number) => {
-    api?.scrollTo(index)
   }
+};
 
+const logoItemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: { y: 0, opacity: 1 }
+};
 
+export default function PortfolioSection() {
   return (
     <section id="portfolio" className="py-24 sm:py-32 bg-secondary/50">
        <motion.div
@@ -68,58 +54,34 @@ export default function PortfolioSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight">Portofolio Mitra Partnership</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Intip kualitas dan kreativitas yang kami persembahkan untuk para pelanggan.
+            Intip kualitas dan kreativitas yang kami persembahkan untuk para pelanggan setia.
           </p>
         </div>
 
-        <div>
-          <Carousel
-            setApi={setApi}
-            plugins={[plugin.current]}
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-6xl mx-auto"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
-          >
-            <CarouselContent>
-              {portfolioItems.map((item) => (
-                <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <Card className="overflow-hidden">
-                      <CardContent className="flex aspect-[3/4] items-center justify-center p-0">
-                        <Image 
-                          src={item.image} 
-                          alt={`Portofolio ${item.id}`} 
-                          width={600} 
-                          height={800} 
-                          className="object-cover w-full h-full"
-                          data-ai-hint={item.aiHint}
-                        />
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden sm:flex" />
-            <CarouselNext className="hidden sm:flex" />
-          </Carousel>
-          <div className="flex justify-center gap-2 mt-4">
-              {Array.from({ length: count }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleDotClick(index)}
-                  className={`h-2 w-2 rounded-full transition-colors ${
-                    current === index ? "bg-primary" : "bg-muted-foreground/50"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-        </div>
+        <motion.div
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4 md:gap-6"
+          variants={logoContainerVariants}
+        >
+          {partnerLogos.map((logo) => (
+            <motion.div
+              key={logo.name}
+              variants={logoItemVariants}
+              className="group"
+            >
+              <div className="flex justify-center items-center h-28 p-4 bg-card rounded-lg shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
+                <div className="relative w-full h-full">
+                  <Image
+                    src={logo.src}
+                    alt={`Logo ${logo.name}`}
+                    layout="fill"
+                    objectFit="contain"
+                    className="filter dark:invert"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </motion.div>
     </section>
   );
