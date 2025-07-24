@@ -66,7 +66,7 @@ export default function HeroSection() {
         </motion.p>
         <motion.div variants={itemVariants} className="mb-12">
           <Button asChild size="lg">
-            <Link href="#products">Lihat Layanan Kami</Link>
+            <Link href="#products">Lihat Produk & Layanan Kami</Link>
           </Button>
         </motion.div>
         
