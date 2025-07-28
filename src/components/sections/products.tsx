@@ -21,6 +21,24 @@ const products = [
     aiHint: 'polo shirt'
   },
   {
+    title: 'Jaket Hoodie',
+    description: 'Hangat dan bergaya, hoodie custom kami sempurna untuk komunitas, acara, atau merchandise brand Anda.',
+    image: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753697673/hoodie_uuo6rf.avif',
+    aiHint: 'hoodie jacket'
+  },
+  {
+    title: 'Kemeja',
+    description: 'Kemeja seragam berkualitas untuk tim Anda. Tampil profesional dan kompak dengan kemeja buatan kami.',
+    image: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753697673/kemeja_b652lu.avif',
+    aiHint: 'formal shirt'
+  },
+  {
+    title: 'Kaos Anak',
+    description: 'Nyaman dan aman untuk si kecil. Hadir dalam berbagai warna ceria dan bahan yang lembut di kulit.',
+    image: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753697673/kaos_anak_npr0h2.avif',
+    aiHint: 'kids t-shirt'
+  },
+  {
     title: 'Jersey',
     description: 'Dibuat untuk performa maksimal, jersey kami cocok untuk tim olahraga Anda. Bahan ringan dan menyerap keringat.',
     image: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1751278566/sport_xv1bkb.jpg',
