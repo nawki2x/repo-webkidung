@@ -11,7 +11,7 @@ const products = [
   {
     title: 'Kaos Polos',
     description: 'Berkualitas tinggi, nyaman, dan tersedia dalam beragam warna. Sempurna untuk pakaian sehari-hari atau sebagai dasar untuk kreasimu.',
-    image: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1751288168/kajetan-sumila-RRB5PAF04Kw-unsplash_avif_vrmidu.avif',
+    image: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753697673/kaos_polos_updyi2.avif',
     aiHint: 'plain t-shirt'
   },
   {
@@ -91,7 +91,7 @@ export default function ProductsSection() {
         </div>
 
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
