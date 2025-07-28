@@ -19,6 +19,7 @@ const partnerLogos = [
   { name: 'YRKI', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099186/Logo_YRKI_ocmbi1.png' },
   { name: 'JFC', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099185/logo_JFC_wjzmj8.png' },
   { name: 'Desa Prajegan', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753099184/Logo_desa_prajegan_yhlkk7.png' },
+  { name: 'Kajawi', src: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1753693628/LOGO_KAJAWI_smaller_resize_trnsprnt_zudyx9.png' },
 ];
 
 const sectionVariants = {
