@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Kampung Kaos Kidung | Kaos Custom & Polos Berkualitas',
   description: 'Pusat kaos polos, custom, dan konveksi. Bahan dan sablon berkualitas tinggi untuk brand atau kebutuhan pribadimu. Berbasis di Kampung Kaos Kidung.',
   keywords: ['kaos polos', 'custom t-shirt', 'sablon kaos', 'konveksi kaos', 'kampung kaos kidung'],
+  icons: {
+    icon: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1754040073/logo_favicon_kkd_1x1-removebg-preview_vdpnd9.ico',
+  },
 };
 
 export default function RootLayout({
@@ -18,7 +21,6 @@ export default function RootLayout({
   return (
     <html lang="id" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="https://res.cloudinary.com/dghc9qsru/image/upload/v1754040073/logo_favicon_kkd_1x1-removebg-preview_vdpnd9.ico" type="image/x-icon" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,701&display=swap" rel="stylesheet" />
