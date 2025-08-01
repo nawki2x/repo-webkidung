@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="id" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="https://res.cloudinary.com/dghc9qsru/image/upload/v1752747596/IMG_9100_ico_trnsprnt_wob7tz.ico" type="image/x-icon" />
+        <link rel="icon" href="https://res.cloudinary.com/dghc9qsru/image/upload/v1754040073/logo_favicon_kkd_1x1-removebg-preview_vdpnd9.ico" type="image/x-icon" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,701&display=swap" rel="stylesheet" />
