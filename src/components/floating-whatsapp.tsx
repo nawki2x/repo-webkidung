@@ -20,7 +20,7 @@ export default function FloatingWhatsApp() {
             className="fixed bottom-6 right-6 z-50"
           >
             <Link href="https://wa.me/6289504951975" target="_blank" rel="noopener noreferrer">
-              <div className="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:bg-[#128C7E] transition-colors">
+              <div className="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl hover:bg-[#128C7E] transition-colors">
                 <Image
                   src="https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/whatsapp.svg"
                   alt="WhatsApp"
