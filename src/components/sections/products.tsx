@@ -39,6 +39,12 @@ const products = [
     aiHint: 'kids t-shirt'
   },
   {
+    title: 'Kaos Promosi',
+    description: 'Jadikan kaos sebagai media promosi yang efektif. Ideal untuk acara, kampanye, atau merchandise perusahaan Anda.',
+    image: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1754469725/kaos_promosi_jvbugo.avif',
+    aiHint: 'promotional t-shirt'
+  },
+  {
     title: 'Jersey',
     description: 'Dibuat untuk performa maksimal, jersey kami cocok untuk tim olahraga Anda. Bahan ringan dan menyerap keringat.',
     image: 'https://res.cloudinary.com/dghc9qsru/image/upload/v1751278566/sport_xv1bkb.jpg',
