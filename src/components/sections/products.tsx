@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react';
@@ -107,13 +106,13 @@ export default function ProductsSection() {
             <motion.div key={product.title} variants={cardVariants}>
               <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <CardHeader>
-                  <div className="aspect-w-16 aspect-h-9 mb-4">
+                  <div className="relative w-full h-[250px] mb-4">
                     <Image
                       src={product.image}
                       alt={product.title}
-                      width={600}
-                      height={400}
-                      className="rounded-md object-cover w-full h-full"
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-md"
                       data-ai-hint={product.aiHint}
                     />
                   </div>
