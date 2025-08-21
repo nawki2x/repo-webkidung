@@ -60,7 +60,7 @@ export default function LocationSection() {
                 <div>
                   <h3 className="text-xl font-bold mb-2">Alamat Kami</h3>
                   <p className="text-muted-foreground">
-                    JL. Pandhawa, Krajan, Prajegan, Kec. Sukorejo, Kabupaten Ponorogo, Jawa Timur 63453, Indonesia
+                    JL. Pandhawa, Krajan, Prajegan, Kec. Sukorejo, Kabupaten Ponorogo, Jawa Timur 63453, Indonesia.
                   </p>
                   <Button asChild className="mt-4">
                     <Link href="https://maps.app.goo.gl/YFqq7Yrk8eGeyr4SA" target="_blank" rel="noopener noreferrer">
