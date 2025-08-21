@@ -33,7 +33,7 @@ export default function LocationSection() {
           <div className="lg:col-span-3">
             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl border">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.553926859598!2d111.46829817477546!3d-7.90424679200877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e790b0d6189b2c3%3A0x8f2d5f3a5323a1a!2sKAMPUNG%20KAOS%20KIDUNG!5e0!3m2!1sen!2sid!4v1717838548590!5m2!1sen!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.295246755653!2d111.5173980747746!3d-7.758416092261946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79a463459d4597%3A0x280a1969a538235f!2sKAMPUNG%20KAOS%20KIDUNG!5e0!3m2!1sen!2sid!4v1718873426768!5m2!1sen!2sid"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
@@ -61,10 +61,10 @@ export default function LocationSection() {
                 <div>
                   <h3 className="text-xl font-bold mb-2">Alamat Kami</h3>
                   <p className="text-muted-foreground">
-                    Jl. Raya Ponorogo - Trenggalek, Tugu, Mrayan, Kec. Ngrayun, Kabupaten Ponorogo, Jawa Timur 63464, Indonesia
+                    JL. Pandhawa, Krajan, Prajegan, Kec. Sukorejo, Kabupaten Ponorogo, Jawa Timur 63453, Indonesia
                   </p>
                   <Button asChild className="mt-4">
-                    <Link href="https://maps.app.goo.gl/TJTBLvQtroXjxzyy9" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://maps.app.goo.gl/YFqq7Yrk8eGeyr4SA" target="_blank" rel="noopener noreferrer">
                       <Navigation className="mr-2 h-4 w-4" /> Buka di Google Maps
                     </Link>
                   </Button>
