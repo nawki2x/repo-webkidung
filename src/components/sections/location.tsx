@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react';
@@ -33,14 +32,14 @@ export default function LocationSection() {
           <div className="lg:col-span-3">
             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl border">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.295246755653!2d111.5173980747746!3d-7.758416092261946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79a463459d4597%3A0x280a1969a538235f!2sKAMPUNG%20KAOS%20KIDUNG!5e0!3m2!1sen!2sid!4v1718873426768!5m2!1sen!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.8818341319293!2d111.4357115!3d-7.8023329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7998e77b54f28d%3A0x8b810a192efa7892!2sKIDUNG%20KONVEKSI!5e0!3m2!1sen!2sid!4v1755773149794!5m2!1sen!2sid"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Peta Lokasi Kampung Kaos Kidung"
+                title="Peta Lokasi Kidung Konveksi"
               ></iframe>
             </div>
           </div>
@@ -61,7 +60,7 @@ export default function LocationSection() {
                 <div>
                   <h3 className="text-xl font-bold mb-2">Alamat Kami</h3>
                   <p className="text-muted-foreground">
-                    JL. Pandhawa, Krajan, Prajegan, Kec. Sukorejo, Kabupaten Ponorogo, Jawa Timur 63453, Indonesia
+                    5CXP+378, Krajan, Prajegan, Kec. Sukorejo, Kabupaten Ponorogo, Jawa Timur 63453
                   </p>
                   <Button asChild className="mt-4">
                     <Link href="https://maps.app.goo.gl/YFqq7Yrk8eGeyr4SA" target="_blank" rel="noopener noreferrer">
