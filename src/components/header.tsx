@@ -23,6 +23,7 @@ const navLinks = [
   { name: 'Produk', href: '#products' },
   { name: 'Toko Online', href: '#marketplace' },
   { name: 'Portofolio', href: '#portfolio' },
+  { name: 'Lokasi', href: '#location' },
   { name: 'Kontak', href: '#contact' },
 ];
 

@@ -7,6 +7,7 @@ import ProductsSection from '@/components/sections/products';
 import PortfolioSection from '@/components/sections/portfolio';
 import MarketplaceSection from '@/components/sections/marketplace';
 import FloatingWhatsApp from '@/components/floating-whatsapp';
+import LocationSection from '@/components/sections/location';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <ProductsSection />
         <MarketplaceSection />
         <PortfolioSection />
+        <LocationSection />
       </main>
       <Footer />
       <FloatingWhatsApp />
