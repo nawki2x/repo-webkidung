@@ -53,7 +53,7 @@ export default function PortfolioSection() {
         variants={sectionVariants}
       >
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight">Portofolio Mitra Partnership</h2>
+          <h2 className="text-3xl font-bold tracking-tight">Portofolio Mitra & Customer</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Dipercaya oleh berbagai merek, komunitas, dan institusi terkemuka. Kami bangga telah menjadi bagian dari cerita sukses mereka.
           </p>
